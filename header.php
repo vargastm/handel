@@ -15,7 +15,7 @@ $cart_count = WC() ->cart-> get_cart_contents_count();
 
 ?>
 
-<header class="header">
+<header class="header container">
   <a href="/"><img src="<?= $img_url; ?>/handel.svg" alt="Handel"/></a>
   <div class="search">
     <form action="<?php bloginfo('url'); ?>/shop/" method="get">
@@ -33,3 +33,11 @@ $cart_count = WC() ->cart-> get_cart_contents_count();
     </a>
   </div>
 </header>
+
+<?php
+  wp_nav_menu([
+    'menu' => 'categorias',
+    'container' => 'nav',
+    'container_class' => 'menu-categorias'
+  ])
+?>
