@@ -43,12 +43,12 @@
 }
 
 .account .cart {
-  background-image: url('../../img/icons/cart.svg');
+  background-image: url('../img/icons/cart.svg');
   position: relative;
 }
 
 .account .my-account {
-  background-image: url('../../img/icons/user.svg');
+  background-image: url('../img/icons/user.svg');
 }
 
 .cart-count {

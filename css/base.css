@@ -36,3 +36,44 @@ img {
 .hidden {
   display: none;
 }
+
+.btn-link {
+  padding: 15px;
+  background: #FFFFFF;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-link::after {
+  content: '';
+  display: block;
+  background: url('../img/icons/arrow.svg') no-repeat center center;
+  width: 18px;
+  height: 18px;
+}
+
+.subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.375rem;
+  margin-bottom: 60px;
+}
+
+.subtitle::before, .subtitle::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 6px;
+  background: currentColor;
+  transform: skew(-20deg);
+}
+
+.subtitle::before {
+  margin: 0 calc(50% + 20px) 0 auto;
+}
+
+.subtitle::after {
+  margin: 5px calc(50% - 120px) 0 auto;
+}
