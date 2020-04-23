@@ -42,6 +42,26 @@ $data['slide'] = format_products($products_slide, 'slide');
 $data['releases'] = format_products($products_new, 'medium');
 $data['sales'] = format_products($products_sales, 'medium');
 
+$home_id = get_the_ID();
+$left_category = get_post_meta($home_id, 'categoria_esquerda', true);
+$right_category = get_post_meta($home_id, 'categoria_direita', true);
+
+function get_product_category_data($category) {
+  $cat = get_term_by('slug', $category, 'product_cat');
+  $cat_id = $cat->term_id;
+  $img_id = get_term_meta($cat_id, 'thumbnail_id', true);
+  return [
+    'name' => $cat -> name,
+    'id' => $cat_id,
+    'link' => get_term_link($cat_id, 'product_cat'),
+    'img' => wp_get_attachment_image_src($img_id, 'slide')[0],
+  ];
+}
+
+$data['category'][$left_category] = get_product_category_data($left_category);
+$data['category'][$right_category] = get_product_category_data($right_category);
+
+
 ?>
 </pre>
 
@@ -70,6 +90,15 @@ $data['sales'] = format_products($products_sales, 'medium');
 <section class="container">
   <h1 class="subtitle">Lançamentos</h1>
   <?php handel_product_list($data['releases']); ?>
+</section>
+
+<section class="category">
+  <?php foreach($data['category'] as $category) { ?>
+    <a href="<?= $category['link'] ?>">
+      <img src="<?= $category['img'] ?>" alt="<?= $category['name'] ?>">
+      <span class="btn-link"><?= $category['name'] ?></span>
+    </a>
+  <?php } ?>
 </section>
 
 <section class="container">
