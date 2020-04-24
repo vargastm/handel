@@ -38,37 +38,10 @@ function remove_some_body_class($classes) {
 }
 add_filter('body_class', 'remove_some_body_class');
 
-function format_products($products, $img_size = 'medium') {
-  $products_final = [];
-  foreach($products as $product) {
-    $products_final[] = [
-      'name' => $product->get_name(),
-      'price' => $product->get_price_html(),
-      'link' => $product->get_permalink(),
-      'img' => wp_get_attachment_image_src($product->get_image_id(), $img_size)[0],
-    ];
-  }
-  return $products_final;
-}
+include(get_template_directory() . '/include/product-list.php');
 
-function handel_product_list($products) { ?>
-  <ul class="products-list">
-    <?php foreach ($products as $product) { ?>
-    <li class="product-item">
-      <a href="<?= $product['link']; ?>">
-        <div class="product-info">
-          <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>">
-          <h2><?= $product['name']; ?>" - <span><?= $product['price']; ?>"</span></h2>
-        </div>
-        <div class="product-overlay">
-          <span class="btn-link">Ver Mais</span>
-        </div>
-      </a>
-    </li>
-    <?php } ?>
-  </ul>
-<?php
-}
 
-add_filter('woocommerce_enable_order_notes_field', '__return_false')
+add_filter('woocommerce_enable_order_notes_field', '__return_false');
+
+include(get_template_directory() . '/include/user-custom-menu.php');
 ?>
