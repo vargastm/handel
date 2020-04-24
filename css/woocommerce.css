@@ -1,0 +1,74 @@
+/* Geral */
+
+.woocommerce a {
+  text-decoration: underline;
+}
+
+/* Notification */
+.woocommerce-message, .woocommerce-info, .woocommerce-error {
+  background: #EEEEEE;
+  border: none;
+  color: #000000;
+  padding: 15px 20px;
+}
+
+.woocommerce-message::before, .woocommerce-info::before, .woocommerce-error::before {
+  display: none;
+}
+
+.woocommerce-error {
+  border-left: 4px solid orangered;
+}
+
+.woocommerce-message, .woocommerce-info {
+  border-left: 4px solid olivedrab;
+}
+
+/* Forms */
+.woocommerce .input-text {
+  font-size: 1.125rem !important;
+  border: 1px solid rgba(0, 0, 0, .08) !important;
+  background: rgba(0, 0, 0, .08) !important;
+  padding: 10px 15px !important;
+  border-radius: 4px !important;
+}
+
+.woocommerce form .form-row {
+  padding: 3px 0;
+}
+
+.woocommerce button.button {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+  text-transform: capitalize;
+  min-height: 43px;
+}
+
+/* Cart */
+.woocommerce #coupon_code {
+  min-width: 180px;
+  margin-right: 10px;
+}
+
+.woocommerce-cart a.button.alt {
+  text-transform: capitalize;
+  font-weight: 500;
+  background-color: #0066BB;
+  transition: 0.3s;
+}
+
+.woocommerce-cart a.button.alt:hover {
+  background-color: #1188EE;
+}
+
+.woocommerce-cart .cart-totals h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.woocommerce table.shop_table {
+  border-radius: 0px;
+}
+

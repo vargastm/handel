@@ -87,6 +87,10 @@
   display: none !important;
 }
 
+.notification {
+  margin: 20px auto;
+}
+
 @media (max-width: 800px) {
   .product {
     grid-template-columns: 1fr;
