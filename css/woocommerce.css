@@ -177,6 +177,46 @@
   border-radius: 0px;
 }
 
+/* Order Received */
+.woocommerce-order-received h2 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.woocommerce-order-received .woocommerce-thankyou-order-received {
+  color: #FFFFFF;
+  background-color: #0066BB;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.woocommerce ul.order_details {
+  background-color: #EEEEEE;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.woocommerce ul.order_details li {
+  margin: 10px;
+}
+
+.woocommerce ul.order_detailsli strong {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.wooocommerce-page .woocommerce-message .button {
+  font-weight: normal;
+  color: #FFFFFF;
+  background: #0066BB;
+}
+
+.wooocommerce-page .woocommerce-message .button:hover {
+  background: #1188EE;
+}
+
+
 @media (max-width: 800px) {
   .woocommerce-checkout .checkout .col-2 h3#ship-to-different-addres {
     margin-top: 30px;

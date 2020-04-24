@@ -44,4 +44,5 @@ include(get_template_directory() . '/include/product-list.php');
 add_filter('woocommerce_enable_order_notes_field', '__return_false');
 
 include(get_template_directory() . '/include/user-custom-menu.php');
+include(get_template_directory() . '/include/checkout-custom.php');
 ?>
