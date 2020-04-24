@@ -48,7 +48,7 @@
           <img data-gallery="main" src="<?= $product_format['img'] ?>" alt="<?= $product_format['name'];?>">
       </div>
   </div>
-  <div class="product-info">
+  <div class="product-detail">
     <small><?= $product_format['sku']; ?></small>
     <h1><?= $product_format['name'];?></h1>
     <p class="product-price"><?= $product_format['price'];?></p>
